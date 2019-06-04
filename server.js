@@ -66,11 +66,14 @@ const person = {
 
 app.get('/', (req, res) => {
   // Student.collection.insertMany(students)
+  console.log(teachers)
+  Teacher.collection.insertMany(teachers)
 
   res.render('pages/index', { person });
 });
 
 app.get('/', (req, res) => {
+  console.log(teachers)
   Teacher.collection.insertMany(teachers)
   console.log(teachers)
 
